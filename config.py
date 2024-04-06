@@ -7,7 +7,7 @@ class DevelopmentConfig(Config):
     DEBUG=True
     MYSQL_HOST='localhost'
     MYSQL_USER='root'
-    MYSQL_PASSWORD=''
+    MYSQL_PASSWORD='123456'
     MYSQL_DB='tienda'
     MAIL_SERVER='smtp.googlemail.com'
     MAIL_PORT=587
