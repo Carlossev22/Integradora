@@ -9,7 +9,7 @@
 {% block body %}
 <form class="form-signin" action="/login" method="POST">
   <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-
+    <img class="mb-4" src="{{ url_for('static', filename='img/halcon1.svg')}}" alt="" width="72" height="57">
     <h1 class="h3 mb-3 fw-normal">Registro de usuario</h1>
 
     <div class="form-floating">
