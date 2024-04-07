@@ -122,7 +122,6 @@ def registro():
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
-        # Aquí necesitarías obtener los datos del formulario de registro
         nombre_completo = request.form['nombre_completo']
         direccion = request.form['direccion']
         correo = request.form['correo']
@@ -130,18 +129,11 @@ def register():
         usuario = request.form['usuario']
         password = request.form['password']
 
-        # Luego, puedes procesar estos datos, por ejemplo, almacenarlos en una base de datos.
-        # Aquí asumiré que tienes una base de datos llamada 'usuarios' con una tabla llamada 'usuarios'
-        # Supongamos también que tienes un modelo de Usuario definido.
-
         nuevo_usuario = Usuario(nombre_completo=nombre_completo, direccion=direccion, correo=correo, telefono=telefono, usuario=usuario, password=password)
         db.session.add(nuevo_usuario)
         db.session.commit()
-
-        # Redireccionar a la página de inicio de sesión después del registro exitoso
         return redirect(url_for('login'))
     else:
-        # Si es una solicitud GET, simplemente renderiza el formulario de registro
         return render_template('auth/formulario.html')
 
 def pagina_no_encontrada(error):
