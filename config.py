@@ -5,9 +5,9 @@ class Config:
 
 class DevelopmentConfig(Config):
     DEBUG=True
-    MYSQL_HOST='localhost'
-    MYSQL_USER='root'
-    MYSQL_PASSWORD='123456'
+    MYSQL_HOST='coveldb.crpztcwucjwd.us-east-1.rds.amazonaws.com'
+    MYSQL_USER='Sevilla'
+    MYSQL_PASSWORD='Carlos2510'
     MYSQL_DB='tienda'
     MAIL_SERVER='smtp.googlemail.com'
     MAIL_PORT=587
